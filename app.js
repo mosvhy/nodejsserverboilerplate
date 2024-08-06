@@ -6,6 +6,9 @@ const cors = require("cors");
 const helmet = require("helmet");
 
 const routes = require("./src/routes");
+const db = require("./src/config/database/db");
+
+db.authenticate();
 
 app.use(cors())
 app.use(helmet())
